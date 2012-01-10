@@ -17,7 +17,12 @@
 		<param-name>org.richfaces.resourceMapping.packedStages</param-name>
 		<param-value>All</param-value>
 	</context-param>
-	
+
+	<context-param>
+		<param-name>javax.faces.FACELETS_LIBRARIES</param-name>
+		<param-value>/WEB-INF/jsfcc.taglib.xml</param-value>
+	</context-param>
+
 	<servlet>
 		<servlet-name>Faces Servlet</servlet-name>
 		<servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
@@ -34,5 +39,5 @@
 
 	<welcome-file-list>
 		<welcome-file>index.jsp</welcome-file>
-	</welcome-file-list>  
+	</welcome-file-list>
 </web-app>
