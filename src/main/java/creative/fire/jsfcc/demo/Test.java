@@ -10,12 +10,14 @@ import javax.faces.context.ExternalContext;
 import javax.faces.context.FacesContext;
 import javax.faces.event.ActionEvent;
 
-import creative.fire.jsfcc.tool.WaterMark;
+import creative.fire.jsfcc.UIWatermark;
 
 @ManagedBean(name = "test")
 @SessionScoped
-public class Test implements Serializable{
+public class Test implements Serializable {
+	private static final long serialVersionUID = 6198279530814568891L;
 	private boolean sw;
+
 	@ManagedProperty(value = "1.png")
 	private String image;
 	@ManagedProperty(value = "水印文字测试")
@@ -48,23 +50,16 @@ public class Test implements Serializable{
 		this.rotate = rotate;
 	}
 
-	private WaterMark wm = new WaterMark();
-
 	public void switching(ActionEvent event) {
+		UIWatermark watermark = (UIWatermark) event.getSource();
 		sw = !sw;
 		final ExternalContext externalContext = FacesContext.getCurrentInstance().getExternalContext();
-
-		String filePath = externalContext.getRealPath("/") + "resources/img/";
 		String contextPath = externalContext.getRequestContextPath() + "/resources/img/";
+		String source = contextPath + image;
 
-		String file = image.substring(contextPath.length(), image.length());
-
-		String source = filePath + file;
-		
-		wm.generate(source, text, Color.BLUE, rotate, position);
 		if (sw)
-			wm.generate(source, text, Color.red, rotate, position);
+			watermark.generateWatermark(source, text, Color.red, rotate, position);
 		else
-			wm.generate(source, text, Color.blue, rotate, position);
+			watermark.generateWatermark(source, text, Color.blue, rotate, position);
 	}
 }

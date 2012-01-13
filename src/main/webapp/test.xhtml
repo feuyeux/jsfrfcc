@@ -5,6 +5,15 @@
 	xmlns:jsfcc="http://jsfrfcc.com">
 <h:head>
 	<title>自定义组件Shuttle演示</title>
+	<style>
+	body {
+		margin-left: 33px;
+		margin-top: 33px;
+		background-color: #F5F5F5;
+		cursor: pointer;
+	}
+	</style>
+	<h:outputScript library="javascript" name="jsf.js" target="head" />
 </h:head>
 
 <h:body>
@@ -17,9 +26,8 @@
 		<h:inputText value="#{test.rotate}" />
 		<br />
 		<jsfcc:watermark id="myImgText" image="#{jsfrfEnv.imagePath}#{test.image}" 
-		text="#{test.text}" rotate="#{test.rotate}" position="right_bottom" switching="#{test.switching}"/>
-		<br />
-		<h:commandButton value="测试" />
+		text="#{test.text}" rotate="#{test.rotate}" position="right_bottom" switching="#{test.switching}"
+		width="50%" height="50%"/>
 	</h:form>
 </h:body>
 </html>
