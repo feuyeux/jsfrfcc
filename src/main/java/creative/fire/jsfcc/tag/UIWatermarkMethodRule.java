@@ -34,6 +34,7 @@ public class UIWatermarkMethodRule extends MetaRule {
 		this.params = params;
 	}
 
+	@Override
 	public Metadata applyRule(final String name, final TagAttribute attribute, MetadataTarget meta) {
 		if (!name.equals(this.methodName))
 			return null;

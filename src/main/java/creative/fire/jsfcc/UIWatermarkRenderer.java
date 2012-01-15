@@ -19,13 +19,10 @@ import javax.faces.render.Renderer;
 public class UIWatermarkRenderer extends Renderer {
 
 	@Override
-	public void encodeBegin(FacesContext context, UIComponent watermark) throws IOException {
+	public void encodeBegin(FacesContext context, UIComponent component) throws IOException {
 		ResponseWriter writer = context.getResponseWriter();
-		String clientId = watermark.getClientId(context);
-		encode(watermark, writer, clientId);
-	}
-
-	private void encode(UIComponent component, ResponseWriter writer, String clientId) throws IOException {
+		String clientId = component.getClientId(context);
+	 
 		String width = (String) component.getAttributes().get("width");
 		String height = (String) component.getAttributes().get("height");
 
@@ -49,7 +46,7 @@ public class UIWatermarkRenderer extends Renderer {
 		writer.writeAttribute("width", width, null);
 		writer.writeAttribute("height", height, null);
 
-		writer.writeAttribute("style", "cursor:'hand'", null);
+		writer.writeAttribute("style", "cursor:'pointer'", null);
 
 		String formId = component.getParent().getClientId();
 		writer.writeAttribute("onclick", "mojarra.jsfcljs(document.getElementById('" + formId + "'),{'" + clientId + "':'" + clientId + "'},'');return false",
