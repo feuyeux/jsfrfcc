@@ -2,6 +2,6 @@
 <html>
 <head></head>
 <body>
-	<jsp:forward page="/test.jsf" />
+	<jsp:forward page="/welcome.jsf" />
 </body>
 </html>
