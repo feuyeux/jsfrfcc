@@ -42,7 +42,7 @@ public class UIWatermarkRenderer extends Renderer {
 		writer.writeAttribute("src", target, "src");
 		writer.writeAttribute("width", "100%", null);
 		writer.writeAttribute("height", "100%", null);
-		writer.writeAttribute("onclick", "100%", null);
+		writer.writeAttribute("onclick", "alert('123')", null);
 		writer.endElement("img");
 	}
 
