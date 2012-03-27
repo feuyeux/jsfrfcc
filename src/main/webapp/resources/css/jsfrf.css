@@ -1,0 +1,71 @@
+body {
+	margin-left: 33px;
+	margin-top: 33px;
+	background-color: #F5F5F5;
+	font-family: 'comic sans ms', 'monaco', 'arial', 'verdana', '微软雅黑';
+}
+
+input,select,textarea,button,keygen,isindex,legend,a {
+	color: #0066CC;
+	font-size: 15px;
+}
+
+.b {
+	font-weight: bold;
+}
+
+.dotBorder {
+	border-style: dotted;
+	border-color: Red;
+	border-width: 1px;	
+}
+
+.vtop {
+	vertical-align: top;
+	width: 150px;
+}
+
+.oddrow {
+	height: 20px;
+	background: #80c0c0;
+	margin: 0;
+	padding: 0;
+	vertical-align: top;
+}
+
+.evenrow {
+	height: 20px;
+	background: #00c0c0;
+	margin: 0;
+	padding: 0;
+	vertical-align: top;
+}
+
+.jsfrfPanel a,.jsfrfPanel a:link,.jsfrfPanel a:visited {
+	background-color: #fff;
+	border: 1px solid #999;
+	margin: 2px;
+	padding: 2px;
+	text-decoration: none;
+	text-align: center;
+	color: #0066CC;
+	font-size: 14px;
+	font-family: 'comic sans ms', 'monaco', 'tahoma', 'arial', 'verdana';
+}
+
+.jsfrfPanel a:hover {
+	background-color: #fff;
+	border: 1px solid #ff;
+	margin: 2px;
+	padding: 2px;
+	text-decoration: none;
+	text-align: center;
+	color: #0066CC;
+	font-size: 14px;
+	font-family: 'comic sans ms', 'monaco', 'tahoma', 'arial', 'verdana';
+	padding: 2px;
+}
+
+.jsfrfPanel td {
+	height: 33px;
+}

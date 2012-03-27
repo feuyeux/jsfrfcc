@@ -1,4 +1,4 @@
-package creative.fire.jsfcc.demo;
+package creative.fire.jsfcc.bean;
 
 import java.awt.Color;
 import java.io.Serializable;
@@ -14,13 +14,13 @@ import creative.fire.jsfcc.UIWatermark;
 
 @ManagedBean(name = "test")
 @SessionScoped
-public class Test implements Serializable {
+public class TestBean implements Serializable {
 	private static final long serialVersionUID = 6198279530814568891L;
 	private boolean sw;
 
 	@ManagedProperty(value = "1.png")
 	private String image;
-	@ManagedProperty(value = "水印文字测试")
+	@ManagedProperty(value = "water mark testing")
 	private String text;
 	@ManagedProperty(value = "-5")
 	private int rotate;
