@@ -21,19 +21,20 @@ public class UIWatermarkRenderer extends Renderer {
 	@Override
 	public void encodeBegin(FacesContext context, UIComponent component) throws IOException {
 		ResponseWriter writer = context.getResponseWriter();
-		String clientId = component.getClientId(context);
-	 
-		String width = (String) component.getAttributes().get("width");
-		String height = (String) component.getAttributes().get("height");
-
 		writer.startElement("img", component);
+
+		String clientId = component.getClientId(context);
 		writer.writeAttribute("id", clientId, null);
 		writer.writeAttribute("name", clientId, null);
-
+		String width = (String) component.getAttributes().get("width");
+		String height = (String) component.getAttributes().get("height");
+		writer.writeAttribute("width", width, null);
+		writer.writeAttribute("height", height, null);
+		writer.writeAttribute("style", "cursor:pointer", null);
 		UIWatermark watermark = ((UIWatermark) component);
-		if (watermark.getTextImage() != null){
+		if (watermark.getTextImage() != null) {
 			writer.writeAttribute("src", watermark.getTextImage(), "src");
-		}else{
+		} else {
 			String image = (String) component.getAttributes().get("image");
 			String text = (String) component.getAttributes().get("text");
 			Integer temp = (Integer) component.getAttributes().get("rotate");
@@ -42,18 +43,12 @@ public class UIWatermarkRenderer extends Renderer {
 			watermark.generateWatermark(image, text, Color.black, rotate, position);
 			writer.writeAttribute("src", watermark.getTextImage(), "src");
 		}
-			
-		writer.writeAttribute("width", width, null);
-		writer.writeAttribute("height", height, null);
-
-		writer.writeAttribute("style", "cursor:'pointer'", null);
 
 		String formId = component.getParent().getClientId();
 		writer.writeAttribute("onclick", "mojarra.jsfcljs(document.getElementById('" + formId + "'),{'" + clientId + "':'" + clientId + "'},'');return false",
 				null);
 		writer.endElement("img");
-
-		watermark.removeMaxMinListener();
+		watermark.removeSwitchListener();
 	}
 
 	@Override

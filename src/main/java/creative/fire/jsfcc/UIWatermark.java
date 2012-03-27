@@ -26,7 +26,7 @@ public class UIWatermark extends UIOutput {
 		this.switchListener = switchListener;
 	}
 
-	public void removeMaxMinListener() {
+	public void removeSwitchListener() {
 		if (switchListener != null) {
 			removeFacesListener(switchListener);
 			switchListener = null;
