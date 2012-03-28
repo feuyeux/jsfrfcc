@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:rich="http://richfaces.org/rich" 
+	xmlns:composite="http://java.sun.com/jsf/composite">
+
+	<composite:interface>
+		<composite:attribute name="image" required="true" />
+		<composite:attribute name="width" />
+		<composite:attribute name="height" />
+		<composite:attribute name="actionLabel" default="switching..." />
+	
+		<composite:attribute name="switchAction" method-signature="java.lang.String action()" />
+		<composite:actionSource name="switching" targets="actionButton" />
+	</composite:interface>
+	
+	<composite:implementation>
+		<h:commandButton 
+			id="actionButton"
+			value="#{cc.attrs.actionLabel}" 
+			action="#{cc.attrs.switchAction}"
+			image="/resources/img/#{cc.attrs.image}"/>
+		<h:panelGrid>
+			<h:graphicImage url="/resources/img/#{cc.attrs.image}" width="50%" height="50%"/>
+			<h:graphicImage url="/resources/img/#{cc.attrs.image}" width="25%" height="25%"/>
+		</h:panelGrid>
+	</composite:implementation>
+</html>

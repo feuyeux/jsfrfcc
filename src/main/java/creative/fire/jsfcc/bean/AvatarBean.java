@@ -1,4 +1,4 @@
-package creative.fire.jsfcc.cc;
+package creative.fire.jsfcc.bean;
 
 import java.io.Serializable;
 
@@ -8,12 +8,12 @@ import javax.faces.bean.SessionScoped;
 
 import org.apache.log4j.Logger;
 
-@ManagedBean(name = "test1")
+@ManagedBean
 @SessionScoped
-public class Test implements Serializable {
+public class AvatarBean implements Serializable {
 	private static final long serialVersionUID = 6198279530814568891L;
-	static Logger log = Logger.getLogger(Test.class);
-	@ManagedProperty(value = "1.png")
+	static Logger log = Logger.getLogger(AvatarBean.class);
+	@ManagedProperty(value = "0.png")
 	private String image;
 
 	public String getImage() {

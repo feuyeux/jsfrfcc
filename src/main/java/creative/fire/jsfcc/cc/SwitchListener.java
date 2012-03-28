@@ -8,12 +8,14 @@ import javax.faces.event.ActionListener;
 
 import org.apache.log4j.Logger;
 
+import creative.fire.jsfcc.bean.AvatarBean;
+
 public class SwitchListener implements ActionListener {
 	static Logger log = Logger.getLogger(SwitchListener.class);
 
 	public void processAction(ActionEvent event) throws AbortProcessingException {
 		final ExternalContext externalContext = FacesContext.getCurrentInstance().getExternalContext();
-		Test test = (Test) externalContext.getSessionMap().get("test1");
+		AvatarBean test = (AvatarBean) externalContext.getSessionMap().get("avatarBean");
 		if (test != null) {
 			log.info(test.getImage());
 		}
