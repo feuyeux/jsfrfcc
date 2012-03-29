@@ -51,6 +51,7 @@ public class TestBean implements Serializable {
 	}
 
 	public void switching(ActionEvent event) {
+		System.out.println(event);
 		UIWatermark watermark = (UIWatermark) event.getSource();
 		sw = !sw;
 		final ExternalContext externalContext = FacesContext.getCurrentInstance().getExternalContext();
