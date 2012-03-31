@@ -22,8 +22,9 @@
 			action="#{cc.attrs.switchAction}"
 			image="/resources/img/#{cc.attrs.image}"/>
 		<h:panelGrid>
-			<h:graphicImage url="/resources/img/#{cc.attrs.image}" width="50%" height="50%"/>
-			<h:graphicImage url="/resources/img/#{cc.attrs.image}" width="25%" height="25%"/>
+			<h:graphicImage url="/resources/img/#{cc.attrs.image}" width="50%" height="50%" />
+			<h:graphicImage url="/resources/img/#{cc.attrs.image}" width="25%" height="25%" />
 		</h:panelGrid>
+		<h:outputText value="#{cc.clientId}  #{cc.family} #{cc.resourceBundleMap.decription}" />
 	</composite:implementation>
 </html>

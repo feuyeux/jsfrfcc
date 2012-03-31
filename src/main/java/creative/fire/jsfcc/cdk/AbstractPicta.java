@@ -9,13 +9,13 @@ import org.richfaces.cdk.annotations.JsfComponent;
 import org.richfaces.cdk.annotations.JsfRenderer;
 import org.richfaces.cdk.annotations.Tag;
 
-@JsfComponent(type = "creative.fire.jsfcc.cdk.avatar", family = "creative.fire.avatar", generate = "creative.fire.jsfcc.cdk.component.UIBasicAvatar", 
-renderer = @JsfRenderer(type = "creative.fire.avatar"), 
-tag = @Tag(name = "avatar"), 
+@JsfComponent(type = "creative.fire.jsfcc.cdk.picta", family = "creative.fire.picta", generate = "creative.fire.jsfcc.cdk.component.UIBasicpicta", 
+renderer = @JsfRenderer(type = "creative.fire.picta"), 
+tag = @Tag(name = "picta"), 
 fires = @Event(value = ActionEvent.class, listener = ActionListener.class, 
 listenerMethod = "switching",
 tag=@Tag(name="switching",generate=true)))
-public abstract class AbstractAvatar extends javax.faces.component.UIOutput {
+public abstract class AbstractPicta extends javax.faces.component.UIOutput {
 	@Attribute(defaultValue = "0.png")
 	public abstract String getImage();
 
