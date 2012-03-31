@@ -11,7 +11,10 @@ import javax.faces.context.FacesContext;
 import javax.faces.event.ActionEvent;
 
 import creative.fire.jsfcc.UIWatermark;
-
+/**
+ * @author feuyeux@gmail.com
+ * @version 1.0
+ */
 @ManagedBean(name = "test")
 @SessionScoped
 public class TestBean implements Serializable {

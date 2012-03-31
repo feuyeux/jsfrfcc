@@ -2,7 +2,6 @@ package creative.fire.jsfcc.tag;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-
 import javax.el.MethodExpression;
 import javax.faces.component.UIComponent;
 import javax.faces.el.MethodBinding;
@@ -12,16 +11,12 @@ import javax.faces.view.facelets.Metadata;
 import javax.faces.view.facelets.MetadataTarget;
 import javax.faces.view.facelets.TagAttribute;
 import javax.faces.view.facelets.TagAttributeException;
-
 import com.sun.faces.facelets.el.LegacyMethodBinding;
 
 /**
- * Optional Rule for binding Method[Binding|Expression] properties
- * 
- * @author Administrator
- * 
+ * @author feuyeux@gmail.com
+ * @version 1.0
  */
-@SuppressWarnings({ "rawtypes", "deprecation" })
 public class UIWatermarkMethodRule extends MetaRule {
 	private final String methodName;
 

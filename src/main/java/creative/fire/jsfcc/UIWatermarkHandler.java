@@ -6,7 +6,10 @@ import javax.faces.view.facelets.ComponentHandler;
 import javax.faces.view.facelets.MetaRuleset;
 
 import creative.fire.jsfcc.tag.UIWatermarkMethodRule;
-
+/**
+ * @author feuyeux@gmail.com
+ * @version 1.0
+ */
 public class UIWatermarkHandler extends ComponentHandler {
 
 	public UIWatermarkHandler(ComponentConfig config) {
@@ -16,6 +19,14 @@ public class UIWatermarkHandler extends ComponentHandler {
 	@SuppressWarnings("rawtypes")
 	@Override
 	protected MetaRuleset createMetaRuleset(Class type) {
-		return super.createMetaRuleset(type).addRule(new UIWatermarkMethodRule("switching", Void.class, new Class<?>[] { ActionEvent.class }));
+		return super.createMetaRuleset(type).addRule(
+			new UIWatermarkMethodRule(
+					"switching", 
+					Void.class, 
+					new Class<?>[] { 
+						ActionEvent.class 
+					}
+			)
+		);
 	}
 }

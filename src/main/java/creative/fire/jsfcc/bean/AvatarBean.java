@@ -7,7 +7,10 @@ import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.SessionScoped;
 
 import org.apache.log4j.Logger;
-
+/**
+ * @author feuyeux@gmail.com
+ * @version 1.0
+ */
 @ManagedBean
 @SessionScoped
 public class AvatarBean implements Serializable {

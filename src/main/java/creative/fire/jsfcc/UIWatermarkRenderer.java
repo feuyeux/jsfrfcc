@@ -14,7 +14,10 @@ import javax.faces.event.MethodExpressionActionListener;
 import javax.faces.event.PhaseId;
 import javax.faces.render.FacesRenderer;
 import javax.faces.render.Renderer;
-
+/**
+ * @author feuyeux@gmail.com
+ * @version 1.0
+ */
 @FacesRenderer(componentFamily = "javax.faces.Output", rendererType = "creative.fire.jsfcc.Watermark")
 public class UIWatermarkRenderer extends Renderer {
 
