@@ -9,8 +9,10 @@ import javax.faces.context.FacesContext;
 import javax.faces.event.ActionListener;
 
 import creative.fire.jsfcc.util.WaterMark;
-
 /**
+ * @author feuyeux@gmail.com
+ * @version 1.0
+ */
 @FacesComponent("creative.fire.jsfcc.Watermark")
 public class UIWatermark extends UIOutput {
 	private String textImage;
