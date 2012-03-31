@@ -5,6 +5,10 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.context.ExternalContext;
 import javax.faces.context.FacesContext;
 
+/**
+ * @author feuyeux@gmail.com
+ * @version 1.0
+ */
 @ManagedBean(name = "jsfrfEnv")
 @ApplicationScoped
 public class JSFRFEnvironment {

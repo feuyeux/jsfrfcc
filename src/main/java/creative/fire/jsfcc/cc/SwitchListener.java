@@ -10,6 +10,10 @@ import org.apache.log4j.Logger;
 
 import creative.fire.jsfcc.bean.AvatarBean;
 
+/**
+ * @author feuyeux@gmail.com
+ * @version 1.0
+ */
 public class SwitchListener implements ActionListener {
 	static Logger log = Logger.getLogger(SwitchListener.class);
 
