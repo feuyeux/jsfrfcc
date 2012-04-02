@@ -11,19 +11,19 @@
 		<cdk:renderer-type>creative.fire.picta</cdk:renderer-type>
 		<cdk:resource-dependency library="javax.faces" name="jsf.js" />
 		<cdk:resource-dependency name="jquery.js" />
-		<cdk:resource-dependency library="rfcdk" name="picta.js" />
+		<cdk:resource-dependency library="rf.cdk" name="picta.js" />
 	</cc:interface>
 
 	<cc:implementation>
 		<script>
 			<cdk:scriptObject name="pictureOptions">
 				<cdk:scriptOption attributes="width height" />
-				<cdk:scriptOption name="image" value="#{component.attributes['src']}"/>
+				<cdk:scriptOption name="image" value="#{component.attributes['image']}"/>
 			</cdk:scriptObject>
 		</script>
 		<div>#{component.attributes['text']}</div>
 		<img id="#{clientId}" name="#{clientId}" cdk:passThrough="width height" 
 			style="cursor: pointer" src="#{component.attributes['image']}"
-			onclick="handlePic(jQuery(document.getElementById('#{clientId}')),#{toScriptArgs(pictureOptions)});return false;"/>
+			onclick="jQuery(document.getElementById('#{clientId}')).handlePic(#{toScriptArgs(pictureOptions)});return false;"/>
 	</cc:implementation>
 </cdk:root>
