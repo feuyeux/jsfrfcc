@@ -22,8 +22,12 @@
 			</cdk:scriptObject>
 		</script>
 		<div>#{component.attributes['text']}</div>
-		<img id="#{clientId}" name="#{clientId}" cdk:passThrough="width height" 
-			style="cursor: pointer" src="#{component.attributes['image']}"
+		<img 
+			id="#{clientId}" 
+			name="#{clientId}"
+			cdk:passThrough="width height" 
+			style="cursor: pointer" 
+			src="#{component.attributes['image']}"
 			onclick="jQuery(document.getElementById('#{clientId}')).handlePic(#{toScriptArgs(pictureOptions)});return false;"/>
 	</cc:implementation>
 </cdk:root>
