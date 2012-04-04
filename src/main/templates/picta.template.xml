@@ -2,9 +2,7 @@
 <cdk:root xmlns="http://jboss.org/schema/richfaces/cdk/xhtml-el"
 	xmlns:cdk="http://jboss.org/schema/richfaces/cdk/core" 
 	xmlns:cc="http://jboss.org/schema/richfaces/cdk/jsf/composite"
-	xmlns:c="http://jboss.org/schema/richfaces/cdk/jstl/core"
-	xmlns:javaee="http://java.sun.com/xml/ns/javaee"
-	xmlns:xi="http://www.w3.org/2001/XInclude">
+	xmlns:c="http://jboss.org/schema/richfaces/cdk/jstl/core">
 	<cc:interface>
 		<cdk:class>creative.fire.jsfcc.cdk.renderkit.PictaRenderer</cdk:class>
 		<cdk:superclass>creative.fire.jsfcc.cdk.BasePictaRenderer</cdk:superclass>
